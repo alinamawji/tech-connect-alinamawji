@@ -8,7 +8,7 @@
 # their diff tool settings and setting the upstream repository.
 
 echo
-read -r -p "Enter your name (First Last): " name
+read -r -p "Enter your BitBucket username: " name
 read -r -p "Enter your email (BitBucket): " email
 
 echo
@@ -27,7 +27,7 @@ git config pull.rebase false
 echo
 echo "Configuring Upstream..."
 
-git remote add upstream "https://bitbucket.org/te-jpmc-tech-connect-us-jun2021/green-java-main"
+git remote add upstream "https://${name}@bitbucket.org/te-jpmc-tech-connect-us-jun2021/green-java-main"
 git config branch.master.mergeOptions "--no-edit"
 
 echo "Done."
