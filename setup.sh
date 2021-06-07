@@ -22,6 +22,7 @@ echo "Setting up Git Editors and Tools..."
 git config --global core.editor "code -w -n"
 git config --global diff.tool code
 git config --global difftool.code.cmd "code -w -d \$LOCAL \$REMOTE"
+git config pull.rebase false
 
 echo
 echo "Configuring Upstream..."
