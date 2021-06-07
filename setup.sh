@@ -9,7 +9,7 @@
 
 echo
 read -r -p "Enter your name (First Last): " name
-read -r -p "Enter your email: " email
+read -r -p "Enter your email (BitBucket): " email
 
 echo
 echo "Setting Up Global Configuration Settings"
@@ -26,7 +26,7 @@ git config --global difftool.code.cmd "code -w -d \$LOCAL \$REMOTE"
 echo
 echo "Configuring Upstream..."
 
-git remote add upstream "https://bitbucket.org/te-jpmc-tech-connect-us-jun2021/java-green-main"
-git config branch.main.mergeOptions "--no-edit"
+git remote add upstream "https://bitbucket.org/te-jpmc-tech-connect-us-jun2021/green-java-main"
+git config branch.master.mergeOptions "--no-edit"
 
 echo "Done."
