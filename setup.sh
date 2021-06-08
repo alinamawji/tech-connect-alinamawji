@@ -28,6 +28,6 @@ echo
 echo "Configuring Upstream..."
 
 git remote add upstream "https://${name}@bitbucket.org/te-jpmc-tech-connect-us-jun2021/green-java-main"
-git config branch.master.mergeOptions "--no-edit"
+git config branch.main.mergeOptions "--no-edit"
 
 echo "Done."
