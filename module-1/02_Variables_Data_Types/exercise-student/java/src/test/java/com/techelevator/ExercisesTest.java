@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.MethodOrderer.OrderAnnotation;
  * and that all variables are camelCased.
  */
 @TestMethodOrder(value = OrderAnnotation.class)
-public class ExercisesTest extends BaseSolution {
+class ExercisesTest extends BaseSolution {
 
     @Test
     @Order(1)
