@@ -1,6 +1,8 @@
 package com.techelevator;
 
 import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Locale;
 import java.util.Map;
 
 public class Exercises {
@@ -34,7 +36,34 @@ public class Exercises {
 	 *
 	 */
 	public String animalGroupName(String animalName) {
-		return null;
+		if ((animalName == null) || (animalName == "")) {
+			return "unknown";
+		}
+
+		animalName = animalName.toLowerCase();
+		HashMap<String, String> animalGroups = new HashMap<String, String>() {{
+			put("rhino", "Crash");
+			put("giraffe", "Tower");
+			put("elephant", "Herd");
+			put("lion", "Pride");
+			put("crow", "Murder");
+			put("pigeon", "Kit");
+			put("flamingo", "Pat");
+			put("deer", "Herd");
+			put("dog", "Pack");
+			put("crocodile", "Float");
+		}};
+
+		if (animalGroups.containsKey(animalName)) {
+			Iterator iter = animalGroups.entrySet().iterator();
+			while (iter.hasNext()) {
+				Map.Entry current = (Map.Entry)iter.next();
+				if (((String)current.getKey()).equals(animalName)) {
+					return (String)current.getValue();
+				}
+			}
+		}
+		return "unknown";
 	}
 
 	/*
@@ -60,7 +89,30 @@ public class Exercises {
 	 *
 	 */
 	public double isItOnSale(String itemNumber) {
-		return -1.0;
+		if ((itemNumber == null) || (itemNumber == "")) {
+			return 0.00;
+		}
+
+		itemNumber = itemNumber.toUpperCase();
+		HashMap<String, Double> salePercentages = new HashMap<String, Double>() {{
+			put("KITCHEN4001", 0.20);
+			put("GARAGE1070", 0.15);
+			put("LIVINGROOM", 0.10);
+			put("KITCHEN6073", 0.40);
+			put("BEDROOM3434", 0.60);
+			put("BATH0073", 0.15);
+		}};
+
+		if (salePercentages.containsKey(itemNumber)) {
+			Iterator iter = salePercentages.entrySet().iterator();
+			while (iter.hasNext()) {
+				Map.Entry current = (Map.Entry)iter.next();
+				if (((String)current.getKey()).equals(itemNumber)) {
+					return (Double)current.getValue();
+				}
+			}
+		}
+		return 0.00;
 	}
 
 	/*
@@ -74,7 +126,16 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> robPeterToPayPaul(Map<String, Integer> peterPaul) {
-		return null;
+		int peterAmt = peterPaul.get("Peter");
+		int paulAmt = peterPaul.get("Paul");
+
+		if ((peterAmt > 0) && (paulAmt < 1000)) {
+			int difference = peterAmt / 2;
+			peterPaul.replace("Peter", peterAmt - difference);
+			peterPaul.replace("Paul", paulAmt + difference);
+		}
+
+		return peterPaul;
 	}
 
 	/*
@@ -87,7 +148,18 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> peterPaulPartnership(Map<String, Integer> peterPaul) {
-		return null;
+		int peterAmt = peterPaul.get("Peter");
+		int paulAmt = peterPaul.get("Paul");
+
+		if ((peterAmt >= 5000) && (paulAmt >= 10000)) {
+			int peterContribution = peterAmt / 4;
+			int paulContribution = paulAmt / 4;
+			peterPaul.put("PeterPaulPartnership", peterContribution + paulContribution);
+			peterPaul.replace("Peter", peterAmt - peterContribution);
+			peterPaul.replace("Paul", paulAmt - paulContribution);
+		}
+
+		return peterPaul;
 	}
 
 	/*
@@ -99,7 +171,15 @@ public class Exercises {
 	 * beginningAndEnding(["muddy", "good", "moat", "good", "night"]) → {"g": "d", "m": "t", "n": "t"}
 	 */
 	public Map<String, String> beginningAndEnding(String[] words) {
-		return null;
+		Map<String, String> charMap = new HashMap<>();
+
+		for (String word : words) {
+			String firstLetter = String.valueOf(word.charAt(0));
+			String lastLetter = String.valueOf(word.charAt(word.length()-1));
+			charMap.put(firstLetter, lastLetter);
+		}
+
+		return charMap;
 	}
 
 	/*
@@ -115,7 +195,19 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> wordCount(String[] words) {
-		return null;
+		Map<String, Integer> wordCounts = new HashMap<>();
+		for (String currentWord : words) {
+			int count = 0;
+			for (String word : words) {
+				if (currentWord.equals(word)) {
+					count += 1;
+				}
+			}
+			wordCounts.put(currentWord, count);
+		}
+
+		return wordCounts;
+
 	}
 
 	/*
@@ -130,7 +222,18 @@ public class Exercises {
 	 *
 	 */
 	public Map<Integer, Integer> integerCount(int[] ints) {
-		return null;
+		Map<Integer, Integer> wordCounts = new HashMap<>();
+		for (int currentInt : ints) {
+			int count = 0;
+			for (int i : ints) {
+				if (currentInt == i) {
+					count += 1;
+				}
+			}
+			wordCounts.put(currentInt, count);
+		}
+
+		return wordCounts;
 	}
 
 	/*
@@ -143,7 +246,22 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		Map<String, Boolean> wordCounts = new HashMap<>();
+		for (String currentWord : words) {
+			int count = 0;
+			boolean appearsMoreThanTwice = false;
+			for (String word : words) {
+				if (currentWord.equals(word)) {
+					count += 1;
+				}
+			}
+			if (count >= 2) {
+				appearsMoreThanTwice = true;
+			}
+			wordCounts.put(currentWord, appearsMoreThanTwice);
+		}
+
+		return wordCounts;
 	}
 
 	/*
@@ -158,7 +276,25 @@ public class Exercises {
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
 			Map<String, Integer> remoteWarehouse) {
-		return null;
+		Map<String, Integer> skuCounts = new HashMap<>();
+		for (Map.Entry<String, Integer> item : mainWarehouse.entrySet()) {
+			String key = item.getKey();
+			if (remoteWarehouse.containsKey(key)) {
+				int mainCount = mainWarehouse.get(key);
+				int remoteCount = remoteWarehouse.get(key);
+				skuCounts.put(key, mainCount + remoteCount);
+				remoteWarehouse.remove(key);
+			} else {
+				int mainCount = mainWarehouse.get(key);
+				skuCounts.put(key, mainCount);
+			}
+		}
+		if (remoteWarehouse.size() != 0) {
+			for (Map.Entry<String, Integer> item : remoteWarehouse.entrySet()) {
+				skuCounts.put(item.getKey(), item.getValue());
+			}
+		}
+		return skuCounts;
 	}
 
 	/*
@@ -177,7 +313,28 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
-		return null;
+		Map<String, Integer> counts = new HashMap<>();
+
+		for (String word : words) {
+			int wordLength = word.length();
+			int count = 0;
+
+			if ((wordLength == 0) || (wordLength == 1) || (wordLength == 2)) {
+				counts.put(word, count);
+			} else {
+				String origSubstr = word.substring(wordLength-2);
+				for (int i = 0; i < wordLength-2; i++) {
+					String currentSubstr = word.substring(i, i+2);
+					System.out.println(currentSubstr);
+					if (currentSubstr.equals(origSubstr)) {
+						count += 1;
+					}
+				}
+				counts.put(word, count);
+			}
+		}
+
+		return counts;
 	}
 
 }
