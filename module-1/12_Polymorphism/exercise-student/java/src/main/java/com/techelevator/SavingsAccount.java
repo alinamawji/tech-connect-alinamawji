@@ -22,4 +22,11 @@ public class SavingsAccount extends BankAccount {
         }
         return getBalance();
     }
+
+    @Override
+    public int transferTo(BankAccount destinationAccount, int transferAmount) {
+        this.withdraw(transferAmount);
+        destinationAccount.deposit(transferAmount);
+        return this.getBalance();
+    }
 }
