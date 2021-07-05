@@ -35,4 +35,16 @@ public class EmployeeTests {
 
         assertEquals("Salary should remain the same when raise percentage is negative.",100, employee.getSalary(),0.0);
     }
+
+    @Test
+    public void getBalanceDueTests() {
+        Employee employee = new Employee("New", "Employee");
+
+        HashMap<String, Double> servicesRendered = new HashMap<String, Double>();
+        servicesRendered.put("Walking", 10.00);
+        servicesRendered.put("Grooming", 15.00);
+        servicesRendered.put("Sitting", 9.00);
+
+        assertEquals("Walking: 10.00, Grooming: 15.00, Sitting: 9.00",29.00, employee.getBalanceDue(servicesRendered), 0.0);
+    }
 }
