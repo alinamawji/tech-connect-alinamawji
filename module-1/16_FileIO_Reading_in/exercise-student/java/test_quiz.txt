@@ -1,2 +1,15 @@
 What color is the sky?|yellow|blue*|green|red
 A skeleton walks into a bar, and says to the bartender, "Give me a beer and a ..."|hair brush|dry erase marker|mop*|yo-yo
+What is my name?|Bob|Fido|Mary|Alina*
+What is 1+1?|Fish|11|1|2*
+Which brand of laptop did we get from Tech Elevator?|Apple|Lenovo|HP|Dell*
+Which is the latest iPhone?|12*|10|13|20
+How many legs do you have?|2*|1|8|4
+The correct answer is A.|B|C|D|A*
+The answer is C.|C*|B|D|A
+The answer is B.|A|C|D|B*
+Which is water?|HCl|Cl4|O2|H2O*
+Protein has how many kcal/g?|4*|7|11|2
+What is my shoe size?|7|5*|8|6
+What is the name of this file?|quiz.txt|test.txt|text.txt|test_quiz.txt*
+What is the last letter of the alphabet?|X|Z*|A|Q
