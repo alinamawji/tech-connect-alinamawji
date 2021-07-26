@@ -1,0 +1,47 @@
+<!DOCTYPE html> <!-- html5 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- variable page structure meta-data -->
+    <title>Nike Fan Form Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+    <h1>Nike Fan Form Page</h1>
+    <img src="../img/nike-banner.jpg" alt="nike banner">
+</header>
+<main>
+    <h2>Create New Fan Profile</h2>
+    <form method="POST" action="http://somewhere.com/api/nikefanprofile">
+        <p>
+            <label for="fanName">Name: </label>
+            <input id="fanName" type="text" required="required">
+        </p>
+        <p>
+            <label for="emailAddress">Email address: </label>
+            <input id="emailAddress" type="text" required="required">
+        </p>
+        <p>
+            <label for="dateOfBirth">Date of Birth: </label>
+            <input id="dateOfBirth" type="date">
+        </p>
+        <p>
+            <label for="favoriteColor">Favorite Color: </label>
+            <input id="favoriteColor" type="color">
+        </p>
+        <p>
+            <label for="favoriteNumber">Favorite Number: </label>
+            <input id="favoriteNumber" type="number">
+        </p>
+        <p>
+            <label for="confirmation">Check if the above information is correct: </label>
+            <input id="confirmation" type="checkbox">
+        </p>
+        <p>
+            <input type="submit">
+        </p>
+    </form>
+</main>
+</body>
+</html>

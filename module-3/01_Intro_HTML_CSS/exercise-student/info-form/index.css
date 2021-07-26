@@ -1,0 +1,18 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    font-family: "Comic Sans MS";
+    background-color: mediumaquamarine;
+}
+
+p, a {
+    font-family: Helvetica;
+    color: lightslategray;
+    font-size: 95%;
+}
+
+form {
+    line-height: 175%;
+}

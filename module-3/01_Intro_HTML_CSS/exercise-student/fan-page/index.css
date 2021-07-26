@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+body {
+    font-family: "Comic Sans MS";
+    background-color: mediumaquamarine;
+    line-height: 200%;
+}
+
+table, p, a {
+    font-family: Helvetica;
+    color: lightslategray;
+    font-size: 95%;
+}
+
+table, td {
+    border-collapse: collapse;
+    border: solid  2px;
+}
