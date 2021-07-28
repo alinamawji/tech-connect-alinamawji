@@ -25,8 +25,21 @@
 	</ul>
 </nav>
 
-<%--
-	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
- --%>
+<ul id="fizzbuzz">
+<c:forEach begin="1" end="${ param.number }" var="num">
+	<c:if test="${num % 3 == 0 && num % 5 == 0}">
+		<li class="fizzbuzz">FizzBuzz!</li>
+	</c:if>
+	<c:if test="${num % 3 == 0}">
+		<li class="fizz">fizz</li>
+	</c:if>
+	<c:if test="${num % 5 == 0}">
+		<li class="buzz">buzz</li>
+	</c:if>
+	<c:if test="${num % 3 != 0 && num % 5 != 0}">
+		<li>${ num }</li>
+	</c:if>
+	</c:forEach>
+</ul>
 
 <c:import url="common/footer.jsp"></c:import>

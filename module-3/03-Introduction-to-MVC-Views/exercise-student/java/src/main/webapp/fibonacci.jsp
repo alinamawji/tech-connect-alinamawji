@@ -31,8 +31,17 @@
 	</ul>
 </nav>
 
-<%--
-	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
- --%>
+<ul id="fibonacci">
+	<c:set var="num1" value="${ 0 }"/>
+	<c:set var="num2" value="${ 1 }"/>
+	<c:forEach begin="1" end="${ param.max }" var="num">
+		<c:set var="num3" value="${ num1 + num2 }"/>
+		<c:if test="${ num3 <= param.max }">
+			<li>${ num3 }</li>
+			<c:set var="num1" value="${ num2 }"/>
+			<c:set var="num2" value="${ num3 }"/>
+		</c:if>
+	</c:forEach>
+</ul>
 
 <c:import url="common/footer.jsp"></c:import>
