@@ -36,7 +36,9 @@
 		</li>
 	</ul>
 </nav>
+<ul>
 
+<<<<<<< HEAD
 <ul id="echo">
 	<c:set var="fontSize" value="${ param.count }"/>
 	<c:forEach begin="1" end="${ param.count }" var="num">
@@ -44,5 +46,12 @@
 		<c:set var="fontSize" value="${ fontSize - 1 }"/>
 	</c:forEach>
 </ul>
+=======
+	<li style="font-size: 20px;">Hello!</li>
+</ul>
+<%--
+	REPLACE THIS COMMENT WITH YOUR UNORDERED LIST...
+ --%>
+>>>>>>> c29491e2b47ec7241a09ce6536acab6f1cb05c9e
 
 <c:import url="common/footer.jsp"></c:import>
