@@ -21,15 +21,9 @@
 		<div id="sorting-options">
 			<h3>Sort By</h3>
 			<ul>
-<<<<<<< HEAD
 				<li><a href="?sortOrder=PriceLowToHigh">Price - Low to High</a></li>
 				<li><a href="?sortOrder=PriceHighToLow">Price - High to Low</a></li>
 				<li><a href="?sortOrder=RatingHighToLow">Rating - High to Low</a></li>
-=======
-				<li><a href="/products?sortOrder=PriceLowToHigh">Price - Low to High</a></li>
-				<li><a href="#">Price - High to Low</a></li>
-				<li><a href="#">Rating - High to Low</a></li>
->>>>>>> 9cf933d886fb7cd21eb01da5081bab435625af6a
 			</ul>
 		</div>
 
