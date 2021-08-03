@@ -3,15 +3,24 @@
 <c:set var="pageTitle" value="All Actors List"/>
 
 <%@include file="common/header.jspf"%>
-<!-- Form goes here -->
+
+<c:url var="formAction" value="/actorList/search"/>
+<form method="GET" action="${ formAction }">
+    <p>
+        <input placeholder="Search" type="text" name="last_name" id="last_name">
+        <input type="submit">
+    </p>
+</form>
+
 <table class="table">
-<tr>
-<th>Name</th>
-</tr>
-<c:forEach items="${actors}" var="actor">
-<tr>
-    <!-- What do we print here for each actor? -->
-</tr>
-</c:forEach>
+    <tr>
+        <th>Name</th>
+    </tr>
+    <c:forEach items="${actors}" var="actor">
+    <tr>
+        <td>${actor.firstName} ${actor.lastName}</td>
+    </tr>
+    </c:forEach>
 </table>
+
 <%@include file="common/footer.jspf"%>
