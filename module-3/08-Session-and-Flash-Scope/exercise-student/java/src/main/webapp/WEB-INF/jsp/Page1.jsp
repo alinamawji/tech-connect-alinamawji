@@ -6,7 +6,8 @@
 	<c:param name="title" value="Favorite Color" />
 </c:import>
 
-<form method="POST">
+<c:url var="formAction" value="/FavoriteThings/Page1" />
+<form method="POST" action="${formAction}">
 	<label>What is your favorite color?</label>
 	<input type="text" name="favoriteColor">
 	<button type="submit">Next >>></button>
