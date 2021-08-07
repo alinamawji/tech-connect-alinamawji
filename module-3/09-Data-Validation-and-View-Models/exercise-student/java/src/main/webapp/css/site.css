@@ -16,5 +16,14 @@ textarea {
     max-width: 280px;
 }
 
+label, input {
+    display: block;
+}
 
+label {
+    margin-bottom: 13px;
+}
 
+input {
+    margin-bottom: 15px;
+}
